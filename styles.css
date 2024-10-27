@@ -1,0 +1,97 @@
+html {
+    font-size: 10px;
+    color: white;
+    font-family: Inter;
+}
+
+body {
+    background: black;
+}
+
+@font-face {
+    font-family: karla;
+    src: url(fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter_28pt-Regular.ttf);
+}
+
+.password__section {
+    padding: 12rem;
+}
+
+.password__container {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.password-content__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    background: #1F2937;
+    max-width: 100%;
+    padding: 4rem 6rem;
+    border-radius: .6rem;
+}
+
+.password__heading {
+    font-size: 4rem;
+    font-family: karla;
+    margin: 0;
+}
+
+.text--accent {
+    color: #4adf86
+}
+
+.password__lede {
+    color: #D5D4D8;
+    font-size: 2rem;
+
+}
+
+.divider {
+    border: 1px solid #273549;
+}
+
+.btn--passwords {
+    background: #0c7e58;
+    width: 191px;
+    height: 42px;
+    color: #D5D4D8;
+    border-radius: .6rem;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    cursor: pointer;
+}
+
+.btn--passwords:hover {
+    background-color: #08573d;
+}
+
+.passwords__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password__field {
+    background: #273549;
+    width: 211px;
+    height: 39px;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+
+.password__field {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: #4adf86
+}
