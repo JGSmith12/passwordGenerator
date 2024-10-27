@@ -1,18 +1,4 @@
 :root {
-    --base: #1F2937;
-    --base-variant: #273549;
-    --text: white;
-    --text-variant: #D5D4D8;
-    --btn-text: #D5D4D8;
-    --black: #000;
-    --accent: #4adf86;
-    --accent-light: #4adf86;
-    --accent-semi-dark: #0c7e58;
-    --accent-dark: #08573d;
-    --shade: #D5D4D8;
-}
-
-.lightmode {
     --base: #ECFDF5;
     --base-variant: #0c7e582e;
     --text: black;
@@ -24,7 +10,21 @@
     --accent-dark: #08573d;
     --accent-light: #4adf86;
     --shade: #08573d5f;
-    ;
+}
+
+.darkmode {  
+    --base: #1F2937;
+    --base-variant: #273549;
+    --text: white;
+    --text-variant: #D5D4D8;
+    --btn-text: #D5D4D8;
+    --black: #000;
+    --accent: #4adf86;
+    --accent-light: #4adf86;
+    --accent-semi-dark: #0c7e58;
+    --accent-dark: #08573d;
+    --shade: #273549;
+    --shade-variant: #4adf86;
 }
 
 html {
@@ -53,7 +53,7 @@ body {
 .password__container {
     position: relative;
     display: flex;
-    height: 300px;
+    height: 100%;
     width: 100%;
     justify-content: center;
     padding: 2rem;
@@ -113,20 +113,17 @@ body {
 }
 
 .password__field {
-    background: var(--shade);
+    display: flex;
+    background: var(--base-variant);
     width: 211px;
     height: 39px;
     border-radius: 0.6rem;
-    overflow: hidden;
-}
-
-.password__field {
-    display: flex;
     font-size: 2rem;
     justify-content: center;
     align-items: center;
-    color: var(--accent-dark);
+    color: var(--accent-semi-dark);
 }
+
 
 #theme-switch {
     height: 4rem;
@@ -145,7 +142,7 @@ body {
 }
 
 #theme-switch svg {
-    fill: var(--shade);
+    fill: var(--accent-semi-dark);
 }
 
 #theme-switch svg:last-child {

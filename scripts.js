@@ -7,15 +7,37 @@ let totalCharacters = 12
 
 let passwordEl1 = document.getElementById("pw1")
 let passwordEl2 = document.getElementById("pw2")
-const modeSwitch = document.getElementById("mode-toggle")
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById("theme-switch")
 
 const enableDarkmode = () => {
-    document.body.classList.add("darkMode")
+    console.log("darkmode")
+    document.body.classList.add("darkmode")
+    localStorage.setItem("darkmode", "active")
+    console.log(localStorage)
 }
 
-const disableDarkMode = () => {
-    document.body.classList.remove("darkMode")
+const disableDarkmode = () => {
+    console.log("remove darkmode")
+    document.body.classList.remove("darkmode")
+    localStorage.setItem('darkmode', null)
 }
+
+if(darkmode === "active") enableDarkmode()
+
+themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    if (darkmode !== "active") {
+        enableDarkmode()
+        console.log("darkmode = active")
+    }
+    else {
+        disableDarkmode()
+    } 
+})
+
+
+
 
 
 function generatePassword() {
@@ -36,11 +58,3 @@ function generatePassword() {
     passwordEl2.textContent = password2   
 }
 
-function toggle() {
-    if (darkmode != "active") {
-        enableDarkmode()
-    }
-    else {
-        disableDarkMode()
-    }
-}
