@@ -1,11 +1,39 @@
+:root {
+    --base: #1F2937;
+    --base-variant: #273549;
+    --text: white;
+    --text-variant: #D5D4D8;
+    --btn-text: #D5D4D8;
+    --black: #000;
+    --accent: #4adf86;
+    --accent-light: #4adf86;
+    --accent-semi-dark: #0c7e58;
+    --accent-dark: #08573d;
+    --shade: #D5D4D8;
+}
+
+.lightmode {
+    --base: #ECFDF5;
+    --base-variant: #0c7e582e;
+    --text: black;
+    --text-variant: black;
+    --btn-text: white;
+    --black: #000;
+    --accent: #0c7e58;
+    --accent-semi-dark: #0c7e58;
+    --accent-dark: #08573d;
+    --accent-light: #4adf86;
+    --shade: #08573d5f;
+    ;
+}
+
 html {
     font-size: 10px;
-    color: white;
     font-family: Inter;
 }
 
 body {
-    background: black;
+    background: var(--black);
 }
 
 @font-face {
@@ -23,20 +51,23 @@ body {
 }
 
 .password__container {
+    position: relative;
     display: flex;
     height: 300px;
     width: 100%;
-    padding: 2rem;
     justify-content: center;
+    padding: 2rem;
 }
 
 .password-content__wrapper {
     display: flex;
+    position: relative;
     flex-direction: column;
     row-gap: 2rem;
-    background: #1F2937;
+    background: var(--base);
     max-width: 100%;
-    padding: 4rem 6rem;
+    height: 100%;
+    padding: 6rem 6rem 6rem 6rem;
     border-radius: .6rem;
 }
 
@@ -44,27 +75,28 @@ body {
     font-size: 4rem;
     font-family: karla;
     margin: 0;
+    color: var(--text)
 }
 
 .text--accent {
-    color: #4adf86
+    color: var(--accent);
 }
 
 .password__lede {
-    color: #D5D4D8;
+    color: var(--text-variant);
     font-size: 2rem;
 
 }
 
 .divider {
-    border: 1px solid #273549;
+    border: 1px solid var(--base-variant);
 }
 
 .btn--passwords {
-    background: #0c7e58;
+    background: var(--accent-semi-dark);
     width: 191px;
     height: 42px;
-    color: #D5D4D8;
+    color: var(--btn-text);
     border-radius: .6rem;
     border: none;
     padding: 0.9rem 1.5rem;
@@ -72,7 +104,7 @@ body {
 }
 
 .btn--passwords:hover {
-    background-color: #08573d;
+    background-color: var(--accent-dark);
 }
 
 .passwords__wrapper {
@@ -81,7 +113,7 @@ body {
 }
 
 .password__field {
-    background: #273549;
+    background: var(--shade);
     width: 211px;
     height: 39px;
     border-radius: 0.6rem;
@@ -93,5 +125,36 @@ body {
     font-size: 2rem;
     justify-content: center;
     align-items: center;
-    color: #4adf86
+    color: var(--accent-dark);
+}
+
+#theme-switch {
+    height: 4rem;
+    width: 4rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    right: 6rem;
+    cursor: pointer;
+    border: none;
+}
+
+#theme-switch svg {
+    fill: var(--shade);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch svg:first-child {
+    display: none;
+}
+.lightmode #theme-switch svg:last-child {
+    display: block;
 }

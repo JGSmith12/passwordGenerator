@@ -7,6 +7,15 @@ let totalCharacters = 12
 
 let passwordEl1 = document.getElementById("pw1")
 let passwordEl2 = document.getElementById("pw2")
+const modeSwitch = document.getElementById("mode-toggle")
+
+const enableDarkmode = () => {
+    document.body.classList.add("darkMode")
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove("darkMode")
+}
 
 
 function generatePassword() {
@@ -25,4 +34,13 @@ function generatePassword() {
     }
     passwordEl1.textContent = password1
     passwordEl2.textContent = password2   
+}
+
+function toggle() {
+    if (darkmode != "active") {
+        enableDarkmode()
+    }
+    else {
+        disableDarkMode()
+    }
 }
