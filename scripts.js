@@ -36,10 +36,6 @@ themeSwitch.addEventListener("click", () => {
     } 
 })
 
-
-
-
-
 function generatePassword() {
     let password1 = ""
     let password2 = ""
@@ -56,5 +52,9 @@ function generatePassword() {
     }
     passwordEl1.textContent = password1
     passwordEl2.textContent = password2   
+}
+
+function copyText() {
+    var copyText =document.getElementById("")
 }
 
